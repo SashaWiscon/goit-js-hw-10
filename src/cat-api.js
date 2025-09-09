@@ -13,7 +13,7 @@ function fetchBreeds() {
   };
   
   return axios
-    .get(`${BASE_URL}/breeds1`, options)
+    .get(`${BASE_URL}/breeds`, options)
     .then(function (response) {
       console.log("all breeds", response.data);
       return response.data;
