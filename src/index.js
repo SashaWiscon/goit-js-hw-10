@@ -1,7 +1,5 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import SlimSelect from 'slim-select';
-// import 'slim-select/dist/slimselect.css';
-// import './styles.css'; 
 
 const breedSelect = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
@@ -31,7 +29,7 @@ fetchBreeds()
 
 function onSelect(evt) {
   catContainer.style.display = 'none';
-  errorEl.style.display = 'block';
+  errorEl.style.display = 'none';
   loader.style.display = 'block';
   const breedId = evt.target.value;
   // console.log('eto evt target', breedId);
