@@ -31,7 +31,7 @@ fetchBreeds()
 
 function onSelect(evt) {
   catContainer.style.display = 'none';
-  errorEl.style.display = 'block';
+  errorEl.style.display = 'none';
   loader.style.display = 'block';
   const breedId = evt.target.value;
   // console.log('eto evt target', breedId);
