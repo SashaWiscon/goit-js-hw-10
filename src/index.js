@@ -31,7 +31,7 @@ fetchBreeds()
 
 function onSelect(evt) {
   catContainer.style.display = 'none';
-  errorEl.style.display = 'none';
+  errorEl.style.display = 'block';
   loader.style.display = 'block';
   const breedId = evt.target.value;
   // console.log('eto evt target', breedId);
@@ -51,6 +51,7 @@ function onSelect(evt) {
         .join('');
 
       loader.style.display = 'none';
+        errorEl.style.display = 'none';
       catContainer.style.display = 'flex';
       catContainer.innerHTML = markup;
     })
