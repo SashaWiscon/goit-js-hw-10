@@ -12,7 +12,8 @@ breedSelect.addEventListener('change', onSelect);
 
 fetchBreeds()
   .then(data => {
-    loader.style.display = 'none';
+    loader.style.display = 'block';
+    errorEl.style.display = 'none';
     const optionsMarkup = data
       .map(cat => `<option value ="${cat.id}">${cat.name}</option>`)
       .join('');
@@ -25,13 +26,12 @@ fetchBreeds()
   .catch(function (error) {
     loader.style.display = 'none';
     errorEl.style.display = 'block';
-    console.log(error);
     // throw new Error(`${error.response.status} ${error.response.statusText}`);
   });
 
 function onSelect(evt) {
   catContainer.style.display = 'none';
-  errorEl.style.display = 'none';
+  errorEl.style.display = 'block';
   loader.style.display = 'block';
   const breedId = evt.target.value;
   // console.log('eto evt target', breedId);
