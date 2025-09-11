@@ -1,7 +1,7 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import SlimSelect from 'slim-select';
-import 'slim-select/dist/slimselect.css';
-import './styles.css'; 
+// import 'slim-select/dist/slimselect.css';
+// import './styles.css'; 
 
 const breedSelect = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
@@ -12,7 +12,7 @@ breedSelect.addEventListener('change', onSelect);
 
 fetchBreeds()
   .then(data => {
-    loader.style.display = 'block';
+    loader.style.display = 'none';
     const optionsMarkup = data
       .map(cat => `<option value ="${cat.id}">${cat.name}</option>`)
       .join('');
@@ -40,7 +40,7 @@ function onSelect(evt) {
     .then(data => {
       const markup = data
         .map(
-          item => ` <img src = "${item.url}" alt="${item.breeds[0].name}">
+          item => ` <img src = "${item.url}" alt="${item.breeds[0].name}" width="800"  >
         <div>
     <h2>${item.breeds[0].name}</h2>
     <p>${item.breeds[0].description}</p>
