@@ -49,7 +49,7 @@ function onSelect(evt) {
         .join('');
 
       loader.style.display = 'none';
-        errorEl.style.display = 'none';
+      errorEl.style.display = 'none';
       catContainer.style.display = 'flex';
       catContainer.innerHTML = markup;
     })
