@@ -48,7 +48,7 @@ function onSelect(evt) {
         )
         .join('');
 
-      loader.style.display = 'none';
+      loader.style.display = 'block';
       errorEl.style.display = 'none';
       catContainer.style.display = 'flex';
       catContainer.innerHTML = markup;

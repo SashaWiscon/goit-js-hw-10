@@ -34,8 +34,7 @@ function fetchCatByBreed(breedId) {
 
   return axios
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`, options)
-    .then(function (response) {
-      console.log('2nd response', response.data);
+    .then(function (response) {;
       return response.data;
     })
 };
