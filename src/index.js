@@ -7,11 +7,12 @@ const errorEl = document.querySelector('.error');
 const catContainer = document.querySelector('.cat-info');
 
 breedSelect.addEventListener('change', onSelect);
+errorEl.style.display = 'none';
 
 fetchBreeds()
   .then(data => {
     loader.style.display = 'block';
-    errorEl.style.display = 'none';
+   
     const optionsMarkup = data
       .map(cat => `<option value ="${cat.id}">${cat.name}</option>`)
       .join('');
